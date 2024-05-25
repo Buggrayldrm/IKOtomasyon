@@ -10,8 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PersonalCreateRequest {
-
-
     Long Tc;
     String ad;
     String soyad;
