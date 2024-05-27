@@ -3,6 +3,7 @@ package com.example.IKOtomasyon.IKOtomasyon.Controller;
 import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Services.PersonalService;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,7 +39,7 @@ public class PersonalController {
     }
 
     @PostMapping(value = "/createPersonal")
-    public void createPersonal(@RequestBody PersonalCreateRequest personalCreateRequest){
+    public void createPersonal(@RequestBody  PersonalCreateRequest personalCreateRequest){
         personalService.createPersonal(personalCreateRequest);
     }
 }

@@ -5,6 +5,7 @@ import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.PersonalRepository;
 import com.example.IKOtomasyon.IKOtomasyon.Services.PersonalService;
+import com.example.IKOtomasyon.IKOtomasyon.Services.mappers.PersonalMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -22,6 +23,9 @@ public class PersonalServiceTest {
 
     @Mock
     private PersonalRepository personalRepository;
+
+    @Mock
+    private PersonalMapper mapper;
 
     @InjectMocks
     private PersonalService personalService;
@@ -119,11 +123,12 @@ public class PersonalServiceTest {
     @Test
     void testCreatePersonal() {
         // Arrange
-        PersonalCreateRequest newPersonalRequest = new PersonalCreateRequest();
+       PersonalCreateRequest newPersonalRequest = new PersonalCreateRequest();
         newPersonalRequest.setAd("New Name");
         Personal savedPersonal = new Personal();
         savedPersonal.setAd("New Name");
 
+        when(mapper.convertToEntity(newPersonalRequest)).thenReturn(savedPersonal);
         when(personalRepository.save(any(Personal.class))).thenReturn(savedPersonal);
 
         // Act

@@ -3,21 +3,24 @@ package com.example.IKOtomasyon.IKOtomasyon.Services;
 import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.PersonalRepository;
+import com.example.IKOtomasyon.IKOtomasyon.Services.mappers.PersonalMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class PersonalService {
 
 
     private final PersonalRepository personalRepository;
 
+    private final PersonalMapper mapper;
 
-    public PersonalService(PersonalRepository personalRepository) {
-        this.personalRepository = personalRepository;
-    }
+
+
 
     public List<Personal> getALlPersonal(){
 
@@ -53,15 +56,7 @@ public class PersonalService {
 
     public Personal createPersonal(PersonalCreateRequest newPersonalRequest){
 
-        Personal personal=new Personal();
-
-
-        personal.setAd(newPersonalRequest.getAd());
-        personal.setSoyad(newPersonalRequest.getSoyad());
-        personal.setYas(newPersonalRequest.getYas());
-        personal.setCinsiyet(newPersonalRequest.getCinsiyet());
-        personal.setCalismaDurumu(newPersonalRequest.getCalismaDurumu());
-        personal.setCv(newPersonalRequest.getCv());
+        Personal personal=mapper.convertToEntity(newPersonalRequest);
         return personalRepository.save(personal);
     }
 
