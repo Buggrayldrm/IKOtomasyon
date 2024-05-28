@@ -1,8 +1,9 @@
-package com.example.IKOtomasyon.IKOtomasyon.Services;
+package com.example.IKOtomasyon.IKOtomasyon.Services.concretes;
 
 import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.PersonalRepository;
+import com.example.IKOtomasyon.IKOtomasyon.Services.abstracts.PersonalService;
 import com.example.IKOtomasyon.IKOtomasyon.Services.mappers.PersonalMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class PersonalService {
+public class PersonalBusiness implements PersonalService {
 
 
     private final PersonalRepository personalRepository;

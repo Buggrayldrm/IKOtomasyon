@@ -4,7 +4,7 @@ package com.example.IKOtomasyon.IKOtomasyon;
 import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.PersonalRepository;
-import com.example.IKOtomasyon.IKOtomasyon.Services.PersonalService;
+import com.example.IKOtomasyon.IKOtomasyon.Services.concretes.PersonalBusiness;
 import com.example.IKOtomasyon.IKOtomasyon.Services.mappers.PersonalMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,7 +28,7 @@ public class PersonalServiceTest {
     private PersonalMapper mapper;
 
     @InjectMocks
-    private PersonalService personalService;
+    private PersonalBusiness personalService;
 
     @BeforeEach
     void setUp() {
