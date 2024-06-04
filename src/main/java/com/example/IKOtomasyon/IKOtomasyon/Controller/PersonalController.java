@@ -1,6 +1,6 @@
 package com.example.IKOtomasyon.IKOtomasyon.Controller;
 
-import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
+import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Services.concretes.PersonalBusiness;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/personalApi")
 public class PersonalController {
     private final PersonalBusiness personalBusiness;
 
@@ -18,7 +18,7 @@ public class PersonalController {
 
     @GetMapping(value = "/getAllPersonal")
     public List<Personal> getAllPersonal(){
-        return personalBusiness.getALlPersonal();
+        return personalBusiness.getAllPersonal();
     }
 
     @GetMapping(value = "/getOnePersonal/{id}")

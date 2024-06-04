@@ -1,7 +1,7 @@
 package com.example.IKOtomasyon.IKOtomasyon;
 
 
-import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
+import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.PersonalRepository;
 import com.example.IKOtomasyon.IKOtomasyon.Services.concretes.PersonalBusiness;
@@ -43,7 +43,7 @@ public class PersonalServiceTest {
         when(personalRepository.findAll()).thenReturn(Arrays.asList(personal1, personal2));
 
         // Act
-        List<Personal> result = personalService.getALlPersonal();
+        List<Personal> result = personalService.getAllPersonal();
 
         // Assert
         assertEquals(2, result.size());

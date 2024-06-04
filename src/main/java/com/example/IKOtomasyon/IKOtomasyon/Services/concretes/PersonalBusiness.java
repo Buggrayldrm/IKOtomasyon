@@ -1,6 +1,6 @@
 package com.example.IKOtomasyon.IKOtomasyon.Services.concretes;
 
-import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
+import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.PersonalRepository;
 import com.example.IKOtomasyon.IKOtomasyon.Services.abstracts.PersonalService;
@@ -23,7 +23,7 @@ public class PersonalBusiness implements PersonalService {
 
 
 
-    public List<Personal> getALlPersonal(){
+    public List<Personal> getAllPersonal(){
 
         return  personalRepository.findAll();
     }

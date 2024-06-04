@@ -1,6 +1,6 @@
 package com.example.IKOtomasyon.IKOtomasyon.Services.mappers;
 
-import com.example.IKOtomasyon.IKOtomasyon.Dto.PersonalCreateRequest;
+import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import org.springframework.stereotype.Service;
 
