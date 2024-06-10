@@ -1,11 +1,11 @@
-package com.example.IKOtomasyon.IKOtomasyon.Services.mappers;
+package com.example.IKOtomasyon.IKOtomasyon.Services.adapters;
 
 import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PersonalMapper {
+public class PersonalAdapter {
 
 public Personal convertToEntity(PersonalCreateRequest request){
 

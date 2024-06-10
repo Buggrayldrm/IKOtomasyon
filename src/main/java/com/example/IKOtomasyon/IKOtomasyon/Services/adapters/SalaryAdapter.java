@@ -1,4 +1,4 @@
-package com.example.IKOtomasyon.IKOtomasyon.Services.mappers;
+package com.example.IKOtomasyon.IKOtomasyon.Services.adapters;
 
 
 import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.SalaryCreateRequest;
@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class SalaryMapper {
+public class SalaryAdapter {
 
 
     public List<SalaryResponseDto> convertToListResponseDto(List<Salary> salaries){
 
-        // todo: 1. Yöntem
+
         List<SalaryResponseDto> responseDtos = new ArrayList<>();
         for (Salary salary : salaries){
             SalaryResponseDto dto = convertToResponseDto(salary);
@@ -31,9 +31,7 @@ public class SalaryMapper {
 
 
     public SalaryResponseDto convertToResponseDto(Salary salary){
-
         return new SalaryResponseDto(salary.getSalary_id(), salary.getPersonalId().getTc(), salary.getSalary());
-
     }
 
 

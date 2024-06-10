@@ -1,10 +1,11 @@
-package com.example.IKOtomasyon.IKOtomasyon.Services.concretes;
+package com.example.IKOtomasyon.IKOtomasyon;
 
 import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.SalaryCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Dto.Response.SalaryResponseDto;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Salary;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.SalaryRepository;
-import com.example.IKOtomasyon.IKOtomasyon.Services.mappers.SalaryMapper;
+import com.example.IKOtomasyon.IKOtomasyon.Services.concretes.SalaryBusiness;
+import com.example.IKOtomasyon.IKOtomasyon.Services.adapters.SalaryAdapter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,7 +27,7 @@ public class SalaryBusinessTest {
     private SalaryRepository salaryRepository;
 
     @Mock
-    private SalaryMapper salaryMapper;
+    private SalaryAdapter salaryMapper;
 
     @InjectMocks
     private SalaryBusiness salaryBusiness;

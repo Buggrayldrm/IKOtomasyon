@@ -5,7 +5,7 @@ import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.PersonalRepository;
 import com.example.IKOtomasyon.IKOtomasyon.Services.concretes.PersonalBusiness;
-import com.example.IKOtomasyon.IKOtomasyon.Services.mappers.PersonalMapper;
+import com.example.IKOtomasyon.IKOtomasyon.Services.adapters.PersonalAdapter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -25,7 +25,7 @@ public class PersonalServiceTest {
     private PersonalRepository personalRepository;
 
     @Mock
-    private PersonalMapper mapper;
+    private PersonalAdapter mapper;
 
     @InjectMocks
     private PersonalBusiness personalService;

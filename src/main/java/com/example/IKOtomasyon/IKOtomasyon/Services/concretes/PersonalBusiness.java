@@ -4,7 +4,7 @@ import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.PersonalCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Personal;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.PersonalRepository;
 import com.example.IKOtomasyon.IKOtomasyon.Services.abstracts.PersonalService;
-import com.example.IKOtomasyon.IKOtomasyon.Services.mappers.PersonalMapper;
+import com.example.IKOtomasyon.IKOtomasyon.Services.adapters.PersonalAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ public class PersonalBusiness implements PersonalService {
 
     private final PersonalRepository personalRepository;
 
-    private final PersonalMapper mapper;
+    private final PersonalAdapter mapper;
 
 
 

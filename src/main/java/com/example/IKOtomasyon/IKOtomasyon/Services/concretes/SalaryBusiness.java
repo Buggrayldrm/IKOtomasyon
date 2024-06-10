@@ -5,7 +5,7 @@ import com.example.IKOtomasyon.IKOtomasyon.Dto.Response.SalaryResponseDto;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Salary;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.SalaryRepository;
 import com.example.IKOtomasyon.IKOtomasyon.Services.abstracts.SalaryService;
-import com.example.IKOtomasyon.IKOtomasyon.Services.mappers.SalaryMapper;
+import com.example.IKOtomasyon.IKOtomasyon.Services.adapters.SalaryAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Optional;
 public class SalaryBusiness implements SalaryService {
     private final SalaryRepository salaryRepository;
 
-    private final SalaryMapper salaryMapper;
+    private final SalaryAdapter salaryMapper;
 
     @Override
     public List<SalaryResponseDto> getAllSalary(){
