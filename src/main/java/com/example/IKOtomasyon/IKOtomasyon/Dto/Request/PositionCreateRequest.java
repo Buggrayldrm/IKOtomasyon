@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 public class PositionCreateRequest {
 private int position_id;
 private Personal personalId;
-private  int position_name;
+private  String position_name;
 
 }

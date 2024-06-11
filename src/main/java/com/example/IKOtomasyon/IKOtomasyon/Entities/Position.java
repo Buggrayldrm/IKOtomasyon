@@ -19,5 +19,5 @@ public class Position {
     private  Personal personal_id;
 
     @Column(name = "position_name")
-    private int position_name;
+    private String position_name;
 }

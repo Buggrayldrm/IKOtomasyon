@@ -1,10 +1,9 @@
-package com.example.IKOtomasyon.IKOtomasyon;
+package com.example.IKOtomasyon.IKOtomasyon.Services.concretes;
 
 import com.example.IKOtomasyon.IKOtomasyon.Dto.Request.SalaryCreateRequest;
 import com.example.IKOtomasyon.IKOtomasyon.Dto.Response.SalaryResponseDto;
 import com.example.IKOtomasyon.IKOtomasyon.Entities.Salary;
 import com.example.IKOtomasyon.IKOtomasyon.Repository.SalaryRepository;
-import com.example.IKOtomasyon.IKOtomasyon.Services.concretes.SalaryBusiness;
 import com.example.IKOtomasyon.IKOtomasyon.Services.adapters.SalaryAdapter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

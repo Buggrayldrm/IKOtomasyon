@@ -11,5 +11,5 @@ public class PositionResponseDto {
 
     private int positionId;
     private long personalTc;
-    private int position_name;
+    private String position_name;
 }

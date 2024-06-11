@@ -29,6 +29,7 @@ public class PersonalBusiness implements PersonalService {
     }
 
     public Personal getByIdPersonal(Long id){
+
         return personalRepository.findById(id).orElse(null);
     }
 
